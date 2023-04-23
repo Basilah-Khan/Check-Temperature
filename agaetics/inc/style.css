@@ -1,0 +1,170 @@
+*{
+	font-family: 'arial';
+}
+
+/*Helpers*/
+.container{
+	position: relative;
+	width: 95%;
+	margin: auto;
+}
+.d-flex, .row{
+	display: flex;
+	width: 100%;
+}
+.col-100{
+	width: 100%;
+	margin: auto;
+}
+.col-50{
+	width: 50%;
+	margin: auto;
+	padding: 10px 5px;
+}
+.col-33{
+	width: 33.3%;
+	margin: auto;
+	padding: 10px 5px;
+}
+.card{
+	border: 1px solid #ddd;
+    padding: 15px;
+    box-shadow: 0 0 5px #ddd;
+    height: 100px;
+}
+p{
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+/* ------- All Content ------ */
+.search, 
+.result{
+	margin-top: 20px;
+}
+
+/*LOGO*/
+#logo{
+	width: 30%;
+}
+
+/*Search Section*/
+.formControl{
+	width: 50%;
+	border: 1px solid #ddd;
+	outline: none;
+	padding: 10px 15px;
+	text-transform: capitalize;
+	width: 89%;
+}
+.searchBtn{
+    background: linear-gradient(2deg, #5e86c2 5%, #9bdaf2 100%);
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    transition: .5s;
+}
+.searchBtn:hover{
+    background: linear-gradient(2deg, #9bdaf2 5%, #5e86c2 100%);
+    color: #000;
+    transition: .5s;
+}
+#searchedLocation, #LocationLaTLon{
+	margin-top: 5px;
+	padding-left: 15px;
+}
+#currentTemperature, 
+.tableTemperature{
+	position: relative;
+}
+#currentTemperature p, 
+.tableTemperature p{
+	font-size: 20px;
+	text-align: center;
+	margin:3px 0 5px 0;
+}
+.tableIcon{
+	width: 65px;
+	margin: auto;
+	position: relative;
+	left: 25%;
+}
+.icon{
+	width: 65px;
+	margin: auto;
+	position: relative;
+	left: 130px;
+  	animation: mymove 3s infinite;
+}
+
+@keyframes mymove {
+  0% {left: 130px;}
+  50% {left: 155px;}
+  100% {left: 130px;}
+}
+
+/*Temprature table*/
+.temprature-table{
+	width: 100%;
+}
+.temprature-table{
+	border-collapse: collapse;
+} 
+.temprature-table tr, 
+.temprature-table th, 
+.temprature-table td{
+	border: 1px solid #ddd;
+	border-collapse: collapse;
+	padding: 10px;
+}
+.temprature-table th{
+	line-height: 30px;
+}
+
+.mob-table{
+	display: none;
+}
+
+@media only screen and (max-width: 400px){
+	.d-flex, .row {
+	    flex-direction: column;
+	}
+	.col-50{
+	    margin-top: 5px;
+		width: 100%;
+	}
+	.col-33{
+	    margin-top: 5px;
+		width: 100%;
+	}
+	.card{
+	    height: auto;
+	}
+	.result{
+		overflow-x: scroll;
+	}
+	#logo{
+		width: 80%;
+	}
+	.formControl{
+		width: 65%;
+	}
+
+	.dropdown-display {
+		width: 92%;
+	}
+	.dropdown-main {
+		left: 0;
+		width: auto;
+		right: 0;
+	}
+	.nonmob-table{
+		display: none;
+	}
+	.mob-table{
+		display: inline-table;
+	}
+}
